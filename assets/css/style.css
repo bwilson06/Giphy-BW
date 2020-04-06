@@ -2,3 +2,30 @@
     color: rgb(56, 56, 243);
     text-align: center;
 }
+
+#giphy-form{
+    display: flex;
+    justify-content: center;
+}
+
+#giphy-input{
+    margin-right: 6px;
+}
+
+label{
+    color: brown;
+    margin-right: 6px;
+    font-size: 20px;
+}
+
+#buttons{
+    text-align: center;
+    margin-top: 20px;
+}
+
+#gifs{
+    margin: 0 auto;
+    margin-top: 20px;
+    text-align: center;
+    width: auto;
+}

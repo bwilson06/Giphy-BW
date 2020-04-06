@@ -5,13 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <title>Document</title>
 </head>
 <body>
 <h1 class="header">GIPHY BUTTONS!</h1>
-<div class="buttons">
+<form id="giphy-form">
+    <label for="giphy-input">Add some gifs!</label>
+    <input type="text" id="giphy-input">
+    <input id="giphy-button" type="submit" value="Search">
+</form>
+<div id="buttons"></div>
+<div id="gifs"></div>
 
-</div>
+
 
 <script src="assets/javascript/app.js"></script>
 </body>
