@@ -22,6 +22,7 @@ function displayGifs(){
             image.attr("data-animate", results[i].images.fixed_height.url)
             image.attr("data-state", "still")
             image.attr("src", image.attr("data-animate"))
+            $("#gifs").append(p)
             $("#gifs").append(image)
         }
 
