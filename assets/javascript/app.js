@@ -17,7 +17,11 @@ function displayGifs(){
             var rating = results[i].rating
             var p = $("<p>").text("Rating: " + rating)
             var image = $("<img>")
-            image.attr("src", results[i].images.fixed_height.url)
+            image.addClass("gifs")
+            image.attr("data-still", results[i].images.fixed_height_still.url)
+            image.attr("data-animate", results[i].images.fixed_height.url)
+            image.attr("data-state", "still")
+            image.attr("src", image.attr("data-animate"))
             $("#gifs").append(image)
         }
 
@@ -49,6 +53,19 @@ $("#giphy-button").on("click", function(event){
 })
 
 $(document).on("click", ".topic", displayGifs)
+
+$(document).on("click", ".gifs", function(){
+   var state = $(this).attr("data-state")
+   if (state === "still"){
+    $(this).attr("src", $(this).attr("data-animate"));
+    $(this).attr("data-state", "animate");
+  } else {
+    $(this).attr("src", $(this).attr("data-still"));
+    $(this).attr("data-state", "still");
+   }
+})
+
+
 
 
 
